@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+	<head lang="en-GB" dir="ltr">
+		<style>
+			body{ 
+				background:  #F6E7D8;
+				font-family:"Lucida Console";
+				color:#874356
+			}
+			marquee{
+				background:#F68989;
+				
+			}	
+			.nine{
+				color: white;
+				font-weight: bold;
+				background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAA1BMVEWqk5mgKhdVAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GxYgAAb0jQ/cAAAAASUVORK5CYII=);
+			}
+			.FAQ-box{
+				font-family:"Arial";
+				color:white;
+				font-weight:bold;
+				background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAA1BMVEWqk5mgKhdVAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GxYgAAb0jQ/cAAAAASUVORK5CYII=);
+
+			}
+		
+			.answer{
+				display:none;
+				padding:5px 1px;
+				margin-bottom:15px;
+
+			}
+			.FAQ-list-item{
+				position:relative;
+				margin:15px;
+				border-bottom:1px solid #F68989;
+				cursor:pointer;
+			}
+			
+			.FAQ-list-item span{
+				position:absolute;
+				font-size:20px;
+				display:inline-block;
+				top:15px;
+				right:200px;
+			}
+		
+
+		</style>
+		<meta charset="utf-8">
+		<title>FAQ</title>
+	</head>
+	<body>
+		<header>
+			<center> <h1> FAQ</h1></center>
+		</header>
+		
+		<marquee><h3>Space is the boundless three-dimensional extent in which objects and events have relative position and direction. In classical physics, physical space is often conceived in three linear dimensions, although modern physicists usually consider it, with time, to be part of a boundless four-dimensional continuum known as spacetime. The concept of space is considered to be of fundamental importance to an understanding of the physical universe. However, disagreement continues between philosophers over whether it is itself an entity, a relationship between entities, or part of a conceptual framework.</h3></marquee>
+		
+		<div class="FAQ-box"><ul>
+
+			<li class="FAQ-list-item"><h2> Which is the largest planet in the Solar System?</h2><span>+</span>
+				<div class="answer"><p>The lagest planet is Jupiter.</p></div></li>
+			
+			<li class="FAQ-list-item"><h2> What is the name of the galaxy our Solar System is in?</h2><span>+</span>
+				<div class="answer"><p>The name of the galaxy is the Milky Way Galaxy.</p></div></li>
+			
+			<li class="FAQ-list-item"><h2> How many moons does the Earth have?</h2><span>+</span>
+				<div class="answer"><p>The Earth has one moon.</p></div></li>
+		</ul></div>
+		<h2><li style="display:inline-block;"><a href="planets.html">Planets</a></li>
+			<li style="display:inline-block;"><a href="Index.html">Home Page</a></li></h2>
+		
+		<div><ul>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$('.FAQ-list-item').click(function(){
+					var $answer=$(this).find('.answer');
+					if($answer.hasClass('open')){
+						$answer.removeClass('open');
+						$answer.slideUp();
+						$(this).find('span').text('+');
+					}
+					else{
+						$answer.addClass('open');
+						$answer.slideDown();
+						$(this).find('span').text('-');
+					}
+
+					
+				});
+			});
+		</script>
+	</body>
+		
+</html>
